@@ -1,0 +1,902 @@
+
+<!-- saved from url=(0039)http://caspersj.tripod.com/SimonApp.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title> Simon Says Application Source Code </title>
+<script type="text/javascript" async="" src="http://cc.chango.com/static/o.js"></script><script type="text/javascript" async="" src="./Simon Says Application Source Code_files/ga.js"></script><script type="text/javascript" async="" src="./Simon Says Application Source Code_files/lycosn.js"></script><script src="./Simon Says Application Source Code_files/quant.js" async="" type="text/javascript"></script><script src="./Simon Says Application Source Code_files/bootstrap.js" type="text/javascript" async=""></script></head>
+<body bgcolor="GRAY"><!--'"</title></head>-->
+<script type="text/javascript">
+//Compete
+__compete_code = '667f89f26d96c30e99728fe6a608804d';
+(function () { var s=document.createElement('script'),d=document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0],t='https:'==document.location.protocol?'https://c.compete.com/bootstrap/':'http://c.compete.com/bootstrap/';s.src=t+__compete_code+'/bootstrap.js';s.type='text/javascript';s.async='async';if(d){d.appendChild(s);}})();
+//Quantcast
+function channValidator(chann){ return (typeof(chann) == 'string' && chann != '');}
+function lycosQuantcast(){ var lb = ""; if(typeof(cm_host) !== 'undefined' && channValidator(cm_host)){ lb += cm_host.split('.')[0] + '.'; }
+if(typeof(cm_taxid) !== 'undefined' && channValidator(cm_taxid)){ lb += cm_taxid; lb = lb.replace('/',''); } else { lb = lb.replace('.',''); } return lb; }
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" :"http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push({ qacct:"p-6eQegedn62bSo", labels:lycosQuantcast() });
+//OwnerIQ
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+var _oiqq = _oiqq || [];
+_oiqq.push(['oiq_addPageBrand','Lycos']);
+_oiqq.push(['oiq_addPageCat','Internet > Websites']);
+_oiqq.push(['oiq_addPageLifecycle','Intend']);
+_oiqq.push(['oiq_doTag']);
+(function() {
+var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+})();
+}
+//Google Analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount','UA-21402695-19']);
+_gaq.push(['_setDomainName','tripod.com']);
+_gaq.push(['_setCustomVar',1,'member_name','caspersj',3]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//Lycos Init
+function getReferrer() {
+var all= this.document.cookie;
+if (all== '') return false;
+var cookie_name = 'REFERRER=';
+var start = all.lastIndexOf(cookie_name);
+if (start == -1) return false;
+start += cookie_name.length;
+var end = all.indexOf(';', start);
+if (end == -1) end = all.length;
+return all.substring(start, end);
+}
+function getQuery() {
+var rfr = getReferrer();
+if (rfr == '') return false;
+var q = extractQuery(rfr, 'yahoo.com', 'p=');
+if (q) return q;
+q = extractQuery(rfr, '', 'q=');
+return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+var start = full.lastIndexOf(site);
+if (start == -1) return false;
+start = full.lastIndexOf(q_param);
+if (start == -1) return false;
+start += q_param.length;
+var end = full.indexOf('&', start);
+if (end == -1) end = full.length;
+return unescape(full.substring(start, end)).split(" ").join("+");
+}
+function generateHref(atag, template){
+atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_','Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+var lycos_ad = Array();
+var lycos_onload_timer;
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "caspersj";
+var tripod_member_page = "caspersj/SimonApp.htm";
+var tripod_ratings_hash = "1411610237:ad206978489315d022313cfa3af4eb14";
+
+var lycos_ad_category = {"find_what":"call phone"};
+
+var lycos_ad_remote_addr = "68.104.157.176";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "http://members.tripod.com/adm/img/common/ot_smallframe.gif?rand=298639";
+var lycos_ad_track_served = "http://members.tripod.com/adm/img/common/ot_adserved.gif?rand=298639";
+var lycos_search_query = getQuery();
+//Criteo
+var cto_conf = { a:true, i: "294", c:"img", kw: "" } ;
+(function (){
+var c = document.createElement("script"); c.type = "text/javascript"; c.async = true;
+c.src = "http://members.tripod.com/adm/partner/criteo_ld_kw.js";
+var s = document.getElementsByTagName("body")[0]; s.appendChild(c);
+})(); 
+</script><script type="text/javascript" async="" src="http://members.tripod.com/adm/partner/criteo_ld_kw.js"></script>
+<script type="text/javascript" src="http://scripts.lycos.com/catman/init.js"></script>
+
+<script type="text/javascript"> 
+(function(isV)
+{
+    if( !isV )
+    {
+        return;
+    }
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2", "slider"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+    if (this.lycos_search_query)
+    {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if(adCat && adCat.find_what)
+    {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+    
+    for (var s in slots)
+    {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot))
+        {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+
+var w = 0, h = 0, minimumThreshold = 300;
+
+if (top == self)
+{
+    return true;
+}
+if (typeof(window.innerWidth) == 'number' )
+{
+    w = window.innerWidth;
+    h = window.innerHeight;
+}
+else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight))
+{
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+}
+else if (document.body && (document.body.clientWidth || document.body.clientHeight))
+{
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+}
+return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+
+
+
+
+window.onload = function()
+{
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+    
+
+
+    
+    // DOM Inj Ad
+    (function(isTrellix)
+    {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+
+        var isBlokedByDomain = function( href )
+        {
+            var blockedDomains = [
+                "ananyaporn13000.tripod.com",
+                "xxxpornxxx.tripod.com"
+            ];
+            var flag = false;
+            
+            for( var i=0; i<blockedDomains.length; i++ )
+            {
+                if( href.search( blockedDomains[ i ] ) >= 0 )
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        var getMetaContent = function( metaName )
+        {
+            var metas = document.getElementsByTagName('meta');
+            for (i=0; i<metas.length; i++)
+            { 
+                if( metas[i].getAttribute("name") == metaName )
+                { 
+                    return metas[i].getAttribute("content"); 
+                } 
+            }
+            return false;
+        }
+        
+        var getCommentNodes = function(regexPattern)
+        {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+        
+            (function getNodesThatHaveComments(n, pattern)
+            {
+                if (n.hasChildNodes())
+                {
+                    if (n.tagName === 'IFRAME')
+                    {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++)
+                    {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue)))
+                        {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1)
+                        {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList)
+            {
+                if (nodes[preferredNodesList[i]])
+                {
+                    if( isTrellix && nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode )
+                    {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                    else
+                    {
+                        nodesA.push( nodes[preferredNodesList[i]] );
+                    }
+                }
+            }
+            return nodesA;
+        }
+        
+        
+        var properNode = null;
+        var areaNodes = getCommentNodes( new RegExp( '^area Type="area_(\\w+)"' ) );
+
+        for (var i = 0; i < areaNodes.length; i++)
+        {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400))
+            {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+
+        var propertyName = getMetaContent("property") || false;
+        if( isTrellix && (properNode) )
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else if( isTrellix && !( properNode ) ) // Slap the ad eventhought there is no alocated slot
+        {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            e.style.cssFloat = 'none';
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( e );
+            b.insertBefore(cdiv, b.lastChild);
+        }
+        else if( !isBlokedByDomain( location.href ) )
+        {
+           
+        }
+
+
+        var injF = document.createElement('iframe');
+        injF.style.border = '0';
+        injF.style.margin = 0;
+        injF.style.display = 'block';
+        injF.style.cssFloat = 'none';
+        injF.style.height = '254px';
+        injF.style.overflow = 'hidden';
+        injF.style.padding = 0;
+        injF.style.width = '300px';
+        injF.src = '/adm/ad/injectAd.iframe.html';
+
+        if( b && ( !isTrellix || ( typeof isTrellix == "undefined" ) ) ) // All other tripod props
+        {
+            var cdiv = document.createElement('div');
+            cdiv.style = "width:300px;margin:10px auto;";
+            cdiv.appendChild( injF );
+            b.insertBefore(cdiv, b.lastChild);
+        } 
+    }( document.isTrellix ));
+}
+
+</script>
+
+<style>
+#body .adCenterClass{margin:0 auto}
+</style>
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+<div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<a href="http://adtrack.ministerial5.com/clicknew/?a=637394" title="build your own website at Tripod.com" style="float:left; width:186px; border:0">
+<img src="http://ly.lygo.com/ly/tpSite/images/freeAd2.jpg" alt="Make your own free website on Tripod.com" style="border: 0px; display: none !important;">
+</a> 
+<div id="ad_container" style="display:block!important; float:left; width:728px ">
+<script type="text/javascript">document.write(lycos_ad['leaderboard']);</script>undefined
+</div>
+</div>
+</div>
+<script type="text/javascript">document.write(lycos_ad['slider']);</script>undefined <!-- added 7/22 -->
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+<a href="http://adtrack.ministerial5.com/clicknew/?a=637394" title="build your own website at Tripod.com" style="float:left; display:block; width:186px; border:0">
+<img src="http://ly.lygo.com/ly/tpSite/images/freeAd2.jpg" alt="Make your own free website on Tripod.com" style="border: 0px; display: none !important;">
+</a> 
+<div id="footerAd_container" style="display:block!important; float:left; width:728px">
+<iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+</div>
+</div>
+</div>
+<noscript>
+&lt;img src="http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=298639" alt="" width="1" height="1" /&gt;
+&lt;!-- BEGIN STANDARD TAG - 728 x 90 - Lycos - Tripod Fallthrough - DO NOT MODIFY --&gt;
+&lt;iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="728" height="90" src="http://ad.yieldmanager.com/st?ad_type=iframe&amp;amp;ad_size=728x90&amp;amp;section=209094"&gt;&lt;/iframe&gt;
+&lt;!-- END TAG --&gt;
+</noscript>
+<!--Ybrant-->
+<img src="http://ad.yieldmanager.com/pixel?id=1901600&t=2" width="1" height="1" style="display: none !important;">
+<!--Datonics-->
+<script type="text/javascript" src="http://ads.pro-market.net/ads/scripts/site-132783.js"></script>
+<!--Chango-->
+<script type="text/javascript" async="" src="./Simon Says Application Source Code_files/saved_resource"></script><script type="text/javascript">
+var __cho__ = {"pid":1694};
+(function() {
+var c = document.createElement('script');
+c.type = 'text/javascript';
+c.async = true;
+c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(c, s);
+})();
+</script>
+<!-- // -->
+
+<br>
+<table cols="3" border="0" align="CENTER" width="40%">
+<tbody><tr align="CENTER" bgcolor="WHITE">
+<td width="33%"><b><a href="http://kaparthi2.cba.uni.edu/studentWebs/Section3/JoelCaspers/index.htm"> Home Page </a></b></td>
+<td width="33%"><b><a href="http://kaparthi2.cba.uni.edu/studentWebs/Section3/JoelCaspers/topic1.htm"> My Interests </a></b></td>
+<td width="33%"><b><a href="http://kaparthi2.cba.uni.edu/studentWebs/Section3/JoelCaspers/topic2.htm"> Computer Related Experience </a></b></td>
+</tr>
+</tbody></table>
+<br>
+<hr>
+<a name="SimonApp"></a>
+<h2 align="CENTER">SimonApp.java</h2>
+<pre>import Simon;
+
+public class SimonApp
+{
+   public static void main( String [ ] args )
+   {
+      Simon simon = new Simon();
+		simon.show();
+   }
+}
+</pre>
+<br>
+<hr>
+
+<a name="Simon"></a>
+<h2 align="CENTER">Simon.java</h2>
+<pre>import java.awt.*;
+import java.awt.event.*;
+import java.util.Vector;
+
+public class Simon extends Frame {
+
+	private static final int frameWidth = 400;
+	private static final int frameHeight = 400;
+	private static final int xOrigin = 25;
+	private static final int yOrigin = 50;
+	private BlueSimonButton blueButton;
+	private RedSimonButton redButton;
+	private YellowSimonButton yellowButton;
+	private GreenSimonButton greenButton;
+	private String help;
+	private String helpTwo;
+	private ButtonSequencer sequencer;
+	private int buttonPressCount;
+	private int specifiedRound = 1;
+	private Scrollbar specifiedRoundSlider;
+	private int highestRound;
+	private String highestRoundString;
+
+	public Simon() {
+		initialize();
+		System.out.println("Click inside the frame "
+		+"to hide the random strings.");
+	}
+	
+	public void initialize() {
+		setTitle("Simon by Joel Caspers");
+		setSize(frameWidth,frameHeight);
+		blueButton = new BlueSimonButton(xOrigin,yOrigin);
+		redButton = new RedSimonButton(xOrigin,yOrigin+50);
+		yellowButton = new YellowSimonButton(xOrigin,yOrigin+100);
+		greenButton = new GreenSimonButton(xOrigin,yOrigin+150);
+		addMouseListener( new MouseKeeper() );
+		help = "Initialized buttons";
+		helpTwo = "Simon says press:";
+		sequencer = new ButtonSequencer(specifiedRound(),175,150);
+		Button reset = new Button( "RESET" );
+      reset.addActionListener( new ResetButtonListener() );
+      add( "South", reset );
+		buttonPressCount = 0;
+		specifiedRoundSlider = new Scrollbar( Scrollbar.VERTICAL, specifiedRound(), 1, 1, 16 );
+      specifiedRoundSlider.addAdjustmentListener( new ScrollBarListener() );
+      add( "East", specifiedRoundSlider );
+		highestRound = 0;
+		highestRoundString = "Highest Level Passed: "+ highestRound();
+	}
+
+	public void paint(Graphics g) {
+		paintButtons(g);
+		g.setColor(Color.black);
+		g.drawString(help,25,35);
+		g.drawString(helpTwo,175,125);
+		g.drawString(highestRoundString,frameWidth/2,350);
+		sequencer.paint(g);
+	}
+
+	public void paintButtons(Graphics g) {
+		blueButton.paint(g);
+		redButton.paint(g);
+		yellowButton.paint(g);
+		greenButton.paint(g);
+	}
+
+	public int specifiedRound() {
+		return specifiedRound;
+	}
+
+	public int highestRound() {
+		return highestRound;
+	}
+	
+
+//////////////////Inner Classes///////////////////////
+private class MouseKeeper extends MouseAdapter {
+
+	private Point point;
+
+	public void mousePressed( MouseEvent e ) { 
+		point = e.getPoint();
+		buttonPressCheck(blueButton);
+		buttonPressCheck(redButton);
+		buttonPressCheck(yellowButton);
+		buttonPressCheck(greenButton);
+		if(help != "Light Up!!!") {
+			help = "Click a button.";
+		repaint();
+		}
+	}
+
+	public void mouseReleased(MouseEvent e) {
+		checkUserPick(blueButton);
+		checkUserPick(redButton);
+		checkUserPick(yellowButton);
+		checkUserPick(greenButton);
+	}
+
+	private void buttonPressCheck(SimonButton button) {
+		if(button.containsClick(point)) {
+			button.lightUp();
+			help = "Light Up!!!";
+		}
+		repaint();
+	}
+
+	private void checkUserPick(SimonButton button) {
+		if(button.containsClick(pressedPoint())) { 
+			button.setBack();
+			buttonPressCount++;
+			if(sequencer.getSavedString(buttonPressCount-1).equals(button.stringColor()) || sequencer.getSavedString(buttonPressCount).equals("Pick any color") ) {
+				helpTwo = "You made a correct selection";
+				if(buttonPressCount == sequencer.vectorLength()) {
+					helpTwo = "Round Over: Go to the next round.";
+					highestRound = buttonPressCount;
+					highestRoundString = "Highest Level Passed: "+ highestRound();
+				}
+			}
+			else { helpTwo = "Wrong! Reset &amp; try again!"; }
+		}
+			repaint();
+	}
+
+	private Point pressedPoint() {
+		return point;
+	}
+
+}
+
+private class ResetButtonListener implements ActionListener {
+	public void actionPerformed( ActionEvent e ) {
+		help = "Initialized buttons";
+		helpTwo = "Simon says press:";
+		sequencer = new ButtonSequencer(specifiedRound(),175,150);
+		buttonPressCount = 0;
+		highestRoundString = "Highest Level Passed: "+ highestRound();
+      repaint();
+	}
+}
+
+private class ScrollBarListener implements AdjustmentListener {
+	public void adjustmentValueChanged (AdjustmentEvent e) {
+   	specifiedRound = specifiedRoundSlider.getValue();
+		help = "Initialized buttons";
+		helpTwo = "Simon says press:";
+		sequencer = new ButtonSequencer(specifiedRound,175,150);
+		buttonPressCount = 0;
+		repaint();
+	}
+}
+}
+</pre>
+<br>
+<hr>
+
+<a name="SimonButton"></a>
+<h2 align="CENTER">SimonButton.java</h2>
+<pre>import java.awt.*;
+
+public interface SimonButton {
+   public void moveTo(int x,int y);
+   public void paint( Graphics g );
+	public void lightUp();
+	public void setBack();
+	public boolean containsClick(Point point);
+	public String stringColor();
+}
+</pre>
+<br>
+<hr>
+
+<a name="ButtonSequencer"></a>
+<h2 align="CENTER">ButtonSequencer.java</h2>
+<pre>import java.awt.*;
+import java.util.Vector;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.Timer;
+
+public class ButtonSequencer implements ActionListener{
+
+	private int numberOfLightUps;
+	private int x;
+	private int y;
+	private String str;
+	private int random;
+	private Vector stringVector;
+	private String one;
+	private Simon s;
+	private Timer timer;
+	private Rectangle stringCover;
+
+	public ButtonSequencer(int n,int x,int y) {
+		numberOfLightUps = n;
+		this.x = x;
+		this.y = y;
+		str = "Pick any color";
+		saveStrings();
+	}
+
+	public String randomString() {
+		random = (int)((Math.random()*4)+1);
+		switch(random) {
+			case 0: str = "Pick any color"; break;
+			case 1: str = "Blue"; break;
+			case 2: str = "Red"; break;
+			case 3: str = "Yellow"; break;
+			case 4: str = "Green"; break;
+		}
+		return str;
+	}
+
+	public void saveStrings() {
+		stringVector = new Vector();
+		for(int i = 0; i &lt; numberOfLightUps; i++) {
+			stringVector.addElement(randomString());
+		}
+	}
+
+	public String getSavedString(int i) {
+		if(i &lt; numberOfLightUps) {
+			return (String) stringVector.elementAt(i);
+		}
+		return "not a good value";
+	}
+
+	public int vectorLength() {
+		return stringVector.size();
+	}
+
+	public void paint(Graphics g) {
+		int z = 0;
+		for(int i = 0; i &lt; numberOfLightUps; i++) {
+			g.drawString((String)stringVector.elementAt(i),x,y+z);
+			z = z + 10;
+		}
+		timer = new Timer(50,this);
+		timer.addActionListener(this);
+		timer.start();
+			
+		if(stringCover != null) {
+			g.setColor(Color.black);
+			g.fillRect(stringCover.x,stringCover.y,
+				stringCover.width,stringCover.height);
+		}
+	}
+
+	public void actionPerformed( ActionEvent e) {
+		timer.stop();
+		stringCover = new Rectangle(x,y-10,50,160);
+   }
+}
+		
+</pre>
+<br>
+<hr>
+
+<a name="Blue"></a>
+<h2 align="CENTER">BlueSimonButton.java</h2>
+<pre>import java.awt.*;
+import java.awt.Graphics;
+
+public class BlueSimonButton implements SimonButton{
+	private Rectangle location;
+   private Color color;
+	private Color oldColor;
+	private String blue;
+	
+   public BlueSimonButton(int x,int y) {
+      location = new Rectangle(x,y,100,50);
+		color = Color.blue;
+		blue = "Blue";
+   }
+
+   protected int x() { return location.x; }
+   protected int y() { return location.y; }
+	protected int width() { return location.width; }
+	protected int height() { return location.height; }
+   protected Rectangle region() { return location; }
+
+	public String stringColor() {
+		return blue;
+	}
+
+   public void moveTo(int x,int y) {
+      location.setLocation(x, y);
+   }
+
+   public void paint( Graphics g ) {
+      g.setColor( color );
+      g.fillRoundRect( x(),y(),width(),height(),10,10);
+   }
+	public void lightUp() {
+		oldColor = color;
+		color = color.darker();
+	}
+
+	public void setBack() {
+		color = oldColor;
+	}
+
+	public boolean containsClick(Point point) {
+		return region().contains(point);
+	}
+}
+</pre>
+<br>
+<hr>
+
+<a name="Green"></a>
+<h2 align="CENTER">GreenSimonButton.java</h2>
+<pre>import java.awt.*;
+
+public class GreenSimonButton implements SimonButton{
+	private Rectangle location;
+   private Color color;
+	private Color oldColor;
+	private String green;
+	
+   public GreenSimonButton(int x,int y) {
+      location = new Rectangle(x,y,100,50);
+		color = Color.green;
+		green = "Green";
+   }
+
+   protected int x() { return location.x; }
+   protected int y() { return location.y; }
+	protected int width() { return location.width; }
+	protected int height() { return location.height; }
+   protected Rectangle region() { return location; }
+
+	public String stringColor() {
+		return green;
+	}
+
+   public void moveTo(int x,int y) {
+      location.setLocation(x, y);
+   }
+
+   public void paint( Graphics g ) {
+      g.setColor( color );
+      g.fillRoundRect( x(),y(),width(),height(),10,10);
+   }
+	public void lightUp() {
+		oldColor = color;
+		color = color.darker();
+	}
+
+	public void setBack() {
+		color = oldColor;
+	}
+
+	public boolean containsClick(Point point) {
+		return region().contains(point);
+	}
+}
+</pre>
+<br>
+<hr>
+
+<a name="Red"></a>
+<h2 align="CENTER">RedSimonButton.java</h2>
+<pre>import java.awt.*;
+
+public class RedSimonButton implements SimonButton{
+	private Rectangle location;
+   private Color color;
+	private Color oldColor;
+	private String red;
+	
+   public RedSimonButton(int x,int y) {
+      location = new Rectangle(x,y,100,50);
+		color = Color.red;
+		red = "Red";
+   }
+
+   protected int x() { return location.x; }
+   protected int y() { return location.y; }
+	protected int width() { return location.width; }
+	protected int height() { return location.height; }
+   protected Rectangle region() { return location; }
+
+	public String stringColor() {
+		return red;
+	}
+
+   public void moveTo(int x,int y) {
+      location.setLocation(x, y);
+   }
+
+   public void paint( Graphics g ) {
+      g.setColor( color );
+      g.fillRoundRect( x(),y(),width(),height(),10,10);
+   }
+	public void lightUp() {
+		oldColor = color;
+		color = color.darker();
+	}
+
+	public void setBack() {
+		color = oldColor;
+	}
+
+	public boolean containsClick(Point point) {
+		return region().contains(point);
+	}
+}
+</pre>
+<br>
+<hr>
+
+<a name="Yellow"></a>
+<h2 align="CENTER">YellowSimonButton.java</h2>
+<pre>import java.awt.*;
+
+public class YellowSimonButton implements SimonButton{
+	private Rectangle location;
+   private Color color;
+	private Color oldColor;
+	private String yellow;
+	
+   public YellowSimonButton(int x,int y) {
+      location = new Rectangle(x,y,100,50);
+		color = Color.yellow;
+		yellow = "Yellow";
+   }
+
+   protected int x() { return location.x; }
+   protected int y() { return location.y; }
+	protected int width() { return location.width; }
+	protected int height() { return location.height; }
+   protected Rectangle region() { return location; }
+
+	public String stringColor() {
+		return yellow;
+	}
+
+   public void moveTo(int x,int y) {
+      location.setLocation(x, y);
+   }
+
+   public void paint( Graphics g ) {
+      g.setColor( color );
+      g.fillRoundRect( x(),y(),width(),height(),10,10);
+   }
+	public void lightUp() {
+		oldColor = color;
+		color = color.darker();
+	}
+	
+	public void setBack() {
+		color = oldColor;
+	}
+
+	public boolean containsClick(Point point) {
+		return region().contains(point);
+	}
+}
+</pre>
+<br>
+<hr>
+<br>
+<table cols="3" border="0" align="CENTER" width="40%">
+<tbody><tr align="CENTER" bgcolor="WHITE">
+<td width="33%"><b><a href="http://kaparthi2.cba.uni.edu/studentWebs/Section3/JoelCaspers/index.htm"> Home Page </a></b></td>
+<td width="33%"><b><a href="http://kaparthi2.cba.uni.edu/studentWebs/Section3/JoelCaspers/topic1.htm"> My Interests </a></b></td>
+<td width="33%"><b><a href="http://kaparthi2.cba.uni.edu/studentWebs/Section3/JoelCaspers/topic2.htm"> Computer Related Experience </a></b></td>
+</tr>
+</tbody></table>
+<br>
+<h3><center> CONTACT INFORMATON </center>
+<center> Local Phone: 222-0008 </center>
+<center> Cell Phone: (319) 241-9146 </center>
+<center> Email: <a href="mailto:CaspersJ@uni.edu">CaspersJ@uni.edu</a> </center>
+</h3>
+<br>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#SimonApp"> SimonApp.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#Simon"> Simon.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#SimonButton"> SimonButton.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#ButtonSequencer"> ButtonSequencer.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#Blue"> BlueSimonButton.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#Green"> GreenSimonButton.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#Red"> RedSimonButton.java </a>
+<br>
+<a href="http://caspersj.tripod.com/SimonApp.htm#Yellow"> YellowSimonButton.java </a>
+
+</body><button id="javascript-popup-blocker-notify" style="display: none;"></button></html>
